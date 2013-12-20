@@ -14,7 +14,7 @@ class CarriersController < ApplicationController
 	end
 
 	def index
-		@carriers = Carrier.all
+		@carriers = Carrier.order(:name).all
 	end
 
 	def show

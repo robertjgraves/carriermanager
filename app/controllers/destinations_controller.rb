@@ -14,7 +14,7 @@ class DestinationsController < ApplicationController
 	end
 
 	def index
-		@destinations = Destination.all
+		@destinations = Destination.order(:name).all
 	end
 
 	def show

@@ -14,7 +14,7 @@ class OriginsController < ApplicationController
 	end
 
 	def index
-		@origins = Origin.all
+		@origins = Origin.order(:name).all
 	end
 
 	def show
