@@ -1,0 +1,7 @@
+<h1>Destinations</h1>
+<p><%= link_to 'New destination', new_destination_path %></p>
+<ul>
+	<% @destinations.each do |destination| %>
+		<li><%= link_to destination.name, destination %></li>
+	<% end %>
+</ul>

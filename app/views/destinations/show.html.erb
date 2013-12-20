@@ -1,0 +1,6 @@
+<h1><%= @destination.name %></h1>
+
+<p><%= link_to 'Edit', edit_destination_path(@destination) %> |
+<%= link_to 'Destroy', destination_path(@destination),
+                    method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', destinations_path %></p>
