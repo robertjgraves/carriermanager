@@ -1,0 +1,7 @@
+<h1>Carriers</h1>
+<p><%= link_to 'New carrier', new_carrier_path %></p>
+<ul>
+	<% @carriers.each do |carrier| %>
+		<li><%= link_to carrier.name, carrier %></li>
+	<% end %>
+</ul>
