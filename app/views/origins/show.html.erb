@@ -1,0 +1,6 @@
+<h1><%= @origin.name %></h1>
+
+<p><%= link_to 'Edit', edit_origin_path(@origin) %> |
+<%= link_to 'Destroy', origin_path(@origin),
+                    method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', origins_path %></p>

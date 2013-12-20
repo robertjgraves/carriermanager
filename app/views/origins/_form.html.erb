@@ -1,0 +1,21 @@
+<%= form_for @origin do |f| %>
+	<% if @origin.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@origin.errors.cout, "error") %> prohibited this post from being saved: </h2>
+			<ul>
+				<% @origin.errors.full_message.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
