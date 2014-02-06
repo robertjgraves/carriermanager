@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  miles: 9.99
+  origin_id: 
+  destination_id: 
+
+two:
+  miles: 9.99
+  origin_id: 
+  destination_id: 
