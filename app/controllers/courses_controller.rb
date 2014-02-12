@@ -8,9 +8,17 @@ class CoursesController < ApplicationController
   end
 
   def new
+    @course = Course.new
   end
 
   def create
+    @course = Course.new(params[:course].permit(:miles, :origin_id, :destination_id))
+
+    if @course.save
+      redirect_to courses_path
+    else
+      render 'new'
+    end
   end
 
   def update

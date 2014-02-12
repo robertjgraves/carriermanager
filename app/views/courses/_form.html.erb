@@ -1,0 +1,29 @@
+<%= form_for @course do |f| %>
+  <% if @course.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@course.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <ul>
+      <% @course.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+    <p>
+      <%= f.label :origin_id %>
+      <%= collection_select(:course, :origin_id, Origin.all, :id, :name) %>
+    </p>
+
+    <p>
+      <%= f.label :destination_id %>
+      <%= collection_select(:course, :destination_id, Destination.all, :id, :name) %>
+    </p>
+    <p>
+      <%= f.label :miles %>
+      <%= f.text_field :miles %>
+    </p>
+
+    <p> 
+    <%= f.submit %>
+    </p>
+<% end %>

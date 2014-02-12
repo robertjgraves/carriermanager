@@ -1,8 +1,21 @@
 <h1>Routes</h1>
 <p><%= link_to 'New Route', new_course_path %>
 </p>
-<ul>
+<table>
+<tr>
+  <th>Origin</th>
+  <th>Destination</th>
+  <th>Miles</th>
+  <th></th>
+</tr>
+
 <% @courses.each do |course| %>
-  <li><%= link_to course.id, course %></li>
+<tr>
+  
+  <td><%= course.origin.name %></td>
+  <td><%= course.destination.name %></td>
+  <td><%= course.miles %></td>
+  <td><%= link_to 'Show', course %> </td>
+</tr>
 <% end %>
-</ul>
+</table>
