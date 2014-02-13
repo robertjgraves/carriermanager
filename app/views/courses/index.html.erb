@@ -15,7 +15,7 @@
   <td><%= course.origin.name %></td>
   <td><%= course.destination.name %></td>
   <td><%= course.miles %></td>
-  <td><%= link_to 'Show', course %> </td>
+  <td><%= link_to 'Show', course %> | <%= link_to 'Edit', edit_course_path(course) %> </td>
 </tr>
 <% end %>
 </table>

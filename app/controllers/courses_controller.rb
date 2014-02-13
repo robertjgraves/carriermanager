@@ -22,9 +22,17 @@ class CoursesController < ApplicationController
   end
 
   def update
+    @course = Course.find(params[:id])
+
+    if @course.update(params[:course].permit(:miles, :origin_id, :destination_id))
+      redirect_to @course
+    else
+      render 'edit'
+    end
   end
 
   def edit
+    @course = Course.find(params[:id])
   end
 
   def destroy
