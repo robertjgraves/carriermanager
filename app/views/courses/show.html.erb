@@ -1,4 +1,10 @@
 <h1><%= @course.origin.name %> to <%= @course.destination.name %></h1>
 <p>Mileage: <%= @course.miles %></p>
 
-<p><%= link_to 'Edit', edit_course_path(@course) %> | <%= link_to 'Back', courses_path %></p>
+<p>
+  <%= link_to 'Edit', edit_course_path(@course) %> | 
+  <%= link_to 'Back', courses_path %> | 
+  <%= link_to 'Destroy', course_path(@course),
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+
+</p>
